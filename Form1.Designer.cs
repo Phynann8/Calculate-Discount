@@ -36,6 +36,8 @@
             label3 = new Label();
             txtTotal = new TextBox();
             label4 = new Label();
+            label5 = new Label();
+            txtTotalkh = new TextBox();
             SuspendLayout();
             // 
             // txtAmount
@@ -60,7 +62,7 @@
             // btnTotal
             // 
             btnTotal.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnTotal.Location = new Point(343, 451);
+            btnTotal.Location = new Point(343, 496);
             btnTotal.Name = "btnTotal";
             btnTotal.Size = new Size(206, 83);
             btnTotal.TabIndex = 2;
@@ -118,11 +120,34 @@
             label4.TabIndex = 7;
             label4.Text = "Discount";
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Location = new Point(136, 421);
+            label5.Name = "label5";
+            label5.Size = new Size(176, 54);
+            label5.TabIndex = 9;
+            label5.Text = "Total Kh";
+            // 
+            // txtTotalkh
+            // 
+            txtTotalkh.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtTotalkh.Location = new Point(314, 414);
+            txtTotalkh.Multiline = true;
+            txtTotalkh.Name = "txtTotalkh";
+            txtTotalkh.ReadOnly = true;
+            txtTotalkh.Size = new Size(286, 61);
+            txtTotalkh.TabIndex = 8;
+            txtTotalkh.TextChanged += textBox1_TextChanged;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(834, 591);
+            Controls.Add(label5);
+            Controls.Add(txtTotalkh);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(txtTotal);
@@ -147,5 +172,7 @@
         private Label label3;
         private TextBox txtTotal;
         private Label label4;
+        private Label label5;
+        private TextBox txtTotalkh;
     }
 }

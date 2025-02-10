@@ -9,7 +9,7 @@ namespace Calculate_Discount
 
         private void btnTotal_Click(object sender, EventArgs e)
         {
-            double amount, discount, total;
+            double amount, discount, total,totalkh;
             amount = double.Parse(txtAmount.Text);
             if (amount <= 500)
             {
@@ -28,8 +28,15 @@ namespace Calculate_Discount
                 discount = amount * 0.7;
             }
             total = amount - discount;
+            totalkh = total * 4000;
             txtDiscount.Text = discount.ToString();
             txtTotal.Text = total.ToString();
+            txtTotalkh.Text=totalkh.ToString();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
